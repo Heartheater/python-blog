@@ -25,7 +25,8 @@ SECRET_KEY = '$+(yd^yshcf=^qs-u^cfn@su@=yl$$uu49s956j(f(xsag2kan'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'pythonanywhere.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'pythonanywhere.com',
+                 'cinder.pythonanywhere.com']
 
 
 # Application definition
