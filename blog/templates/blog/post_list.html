@@ -10,9 +10,19 @@
 </head>
 
 <body>
-    <header id="header">
-        <h1>Website</h1>
-    </header>
+    <header id="header"></header>
+    <main>
+        <article id="blog-posts">
+            {% for post in posts %}
+            <div class="post-container">
+                <h3 class="post-title">{{post.title}}</h3>
+                <p class="post-text">{{post.text|linebreaksbr}}</p>
+                <p class="publish-date">Published: {{post.published_date}}</p>
+            </div>
+            {% endfor %}
+        </article>
+    </main>
+
 </body>
 
 </html>
