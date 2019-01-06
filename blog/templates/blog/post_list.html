@@ -1,5 +1,5 @@
+{% load static %}
 <!DOCTYPE html>
-
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
@@ -7,10 +7,11 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
 
     <title>Python Blog</title>
+    <link rel="stylesheet" href='{% static "css/blog.css" %}'>
 </head>
 
 <body>
-    <header id="header"></header>
+    <header id="header">????</header>
     <main>
         <article id="blog-posts">
             {% for post in posts %}
