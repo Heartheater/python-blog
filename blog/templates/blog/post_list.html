@@ -1,29 +1,13 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+{% extends "./base.html" %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-
-    <title>Python Blog</title>
-    <link rel="stylesheet" href='{% static "css/blog.css" %}'>
-</head>
-
-<body>
-    <header id="header">????</header>
-    <main>
-        <article id="blog-posts">
-            {% for post in posts %}
-            <div class="post-container">
-                <h3 class="post-title">{{post.title}}</h3>
-                <p class="post-text">{{post.text|linebreaksbr}}</p>
-                <p class="publish-date">Published: {{post.published_date}}</p>
-            </div>
-            {% endfor %}
-        </article>
-    </main>
-
-</body>
-
-</html>
+{% block content %}
+    {% for post in posts %}
+        <div class="post-container">
+            <h3 class="post-title">
+                <a href="{% url 'post_detail' pk=post.pk %}">{{post.title}}</a>
+            </h3>
+            <p class="post-text">{{post.text|linebreaksbr}}</p>
+            <p class="publish-date">Published: {{post.published_date}}</p>
+        </div>
+    {% endfor %}
+{% endblock %}
