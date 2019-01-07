@@ -7,11 +7,21 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
 
     <title>Python Blog</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <link rel="stylesheet" href='{% static "css/blog.css" %}'>
 </head>
 
 <body>
-    <header id="header">Python Blog</header>
+    <header id="header">
+        <h1><a href="{% url 'home' %}"> Python Blog </a></h1>
+        <div class="header-menu">
+            {% if user.is_authenticated %}
+            <a class="add-post" href="{% url 'post_new' %}"> 
+                <i class="fas fa-plus fa-lg"></i> 
+            </a>
+            {% endif %}
+        </div>
+    </header>
     <main>
         <article id="blog-posts">
             {% block content %}
