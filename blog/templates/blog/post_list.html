@@ -1,16 +1,24 @@
 {% extends "./base.html" %}
 
 {% block content %}
+    <section id="about">
+        This is a website I built using Python and Django.
+        On this site you can view blog posts
+        (and if you are an admin edit and make new posts).
+        <a href="https://github.com/Heartheater/python-blog">Link to Source Code</a>
+    </section>
     {% for post in posts %}
         <div class="post-container">
-            <div class="post-top">
-                <h3 class="post-title">
-                    <a href="{% url 'post_detail' pk=post.pk %}">{{post.title}}</a>
-                </h3>
-            </div>
+            <a href="{% url 'post_detail' pk=post.pk %}">
+                <div class="post-top">
+                    <h3 class="post-title">
+                        {{post.title}}
+                    </h3>
+                </div>
 
-            <p class="post-text">{{post.text|linebreaksbr}}</p>
-            <p class="publish-date">Published: {{post.published_date}}</p>
+                <p class="post-text">{{post.text|linebreaksbr}}</p>
+                <p class="publish-date">Published: {{post.published_date}}</p>
+            </a>
         </div>
     {% endfor %}
 {% endblock %}
