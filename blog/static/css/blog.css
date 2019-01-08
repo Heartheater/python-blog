@@ -1,102 +1,114 @@
 body {
-    margin: 0;
-    font-family: Arial;
-    background-color: #e6e6e6; }
-  
-  a {
-    text-decoration: none;
-    color: #403731; }
-  
-  a:hover {
-    color: #51aed2; }
-  
-  button:hover {
-    cursor: pointer; }
-  
-  /************************* HEADER *********************/
-  #header {
-    background-color: #403731;
+  margin: 0;
+  font-family: Arial;
+  background-color: #e6e6e6; }
+
+a {
+  text-decoration: none;
+  color: #403731; }
+
+a:hover {
+  color: #51aed2; }
+
+button:hover {
+  cursor: pointer; }
+
+/************************* HEADER *********************/
+#header {
+  background-color: #403731;
+  text-align: center;
+  margin: 0 0 20px 0;
+  padding: 12px 15px 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Playfair Display SC', serif;
+  letter-spacing: 1px; }
+  #header h1 {
+    margin: 0; }
+  #header a {
+    color: #a5ffd9 !important; }
+  #header .header-menu {
+    padding-top: 13px; }
+
+/************************* ABOUT *********************/
+#about{
+    width: 100%;
     text-align: center;
-    margin: 0 0 20px 0;
-    padding: 12px 15px 10px 15px;
+    margin: 30px 0;
+}
+
+#about a{
+    text-decoration: underline;
+}
+
+/************************* BLOG POSTS *********************/
+#blog-posts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+
+.post-container {
+  font-family: 'Alegreya', serif;
+  width: 70vw;
+  min-width: 300px;
+  max-width: 430px;
+  height: 150px;
+  background-color: #ffffff;
+  padding: 5px 13px;
+  border-radius: 5px;
+  margin: 10px; }
+  .post-container .post-top {
     display: flex;
     justify-content: space-between;
-    font-family: 'Playfair Display SC', serif;
-    letter-spacing: 1px; }
-    #header h1 {
-      margin: 0; }
-    #header a {
-      color: #a5ffd9 !important; }
-    #header .header-menu {
-      padding-top: 13px; }
-  
-  /************************* BLOG POSTS *********************/
-  #blog-posts {
-    display: flex;
+    border-bottom: solid #d8d6d6 1px; }
+  .post-container .post-title {
+    margin: 0; }
+  .post-container .post-text {
+    text-overflow: ellipsis;
+    max-height: 65px;
+    min-height: 65px;
     flex-wrap: wrap;
-    justify-content: center; }
-  
-  .post-container {
-    font-family: 'Alegreya', serif;
-    width: 70vw;
-    min-width: 300px;
-    max-width: 430px;
-    height: 150px;
-    background-color: #ffffff;
-    padding: 5px 13px;
-    border-radius: 5px;
-    margin: 10px; }
-    .post-container .post-top {
-      display: flex;
-      justify-content: space-between;
-      border-bottom: solid #d8d6d6 1px; }
-    .post-container .post-title {
-      margin: 0; }
-    .post-container .post-text {
-      text-overflow: ellipsis;
-      max-height: 65px;
-      min-height: 65px;
-      flex-wrap: wrap;
-      overflow: hidden; }
-    .post-container .publish-date {
-      font-size: 15px;
-      font-style: italic; }
-  
-  /************************* POST DETAIL *********************/
-  .post-detail {
-    font-family: 'Alegreya', serif;
-    width: 80vw;
-    background-color: #ffffff;
-    padding: 5px 13px;
-    border-radius: 5px;
-    margin-top: 10px; }
-    .post-detail .post-top {
-      display: flex;
-      justify-content: space-between;
-      border-bottom: solid #d8d6d6 1px; }
-    .post-detail .post-title {
-      font-size: 25px;
-      margin: 0; }
-    .post-detail .post-text {
-      padding: 15px 0 0 0;
-      text-overflow: ellipsis;
-      min-height: 20vh;
-      flex-wrap: wrap;
-      overflow: hidden; }
-    .post-detail .publish-date {
-      font-size: 15px;
-      font-style: italic; }
-  
-  /************************* NEW POST FORM *********************/
-  .save-post-btn {
-    background-color: #d8d6d6;
-    width: 50px;
-    height: 40px;
-    border: solid #403731 2px;
-    border-radius: 5px;
+    overflow: hidden; }
+  .post-container .publish-date {
     font-size: 15px;
-    padding: 0; }
-  
-  .save-post-btn:hover {
-    background-color: #a5ffd9; }
-  
+    font-style: italic; }
+
+/************************* POST DETAIL *********************/
+.post-detail {
+  font-family: 'Alegreya', serif;
+  width: 80vw;
+  background-color: #ffffff;
+  padding: 5px 13px;
+  border-radius: 5px;
+  margin-top: 10px; }
+  .post-detail .post-top {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid #d8d6d6 1px; }
+  .post-detail .post-title {
+    font-size: 25px;
+    margin: 0; }
+  .post-detail .post-text {
+    padding: 15px 0 0 0;
+    text-overflow: ellipsis;
+    min-height: 20vh;
+    flex-wrap: wrap;
+    overflow: hidden; }
+  .post-detail .publish-date {
+    font-size: 15px;
+    font-style: italic; }
+
+/************************* NEW POST FORM *********************/
+.save-post-btn {
+  background-color: #d8d6d6;
+  width: 50px;
+  height: 40px;
+  border: solid #403731 2px;
+  border-radius: 5px;
+  font-size: 15px;
+  padding: 0; }
+
+.save-post-btn:hover {
+  background-color: #a5ffd9; }
+
+
